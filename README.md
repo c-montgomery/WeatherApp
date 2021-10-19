@@ -1,2 +1,3 @@
 # WeatherApp
-Weather App
+Weather App using API's and JSON
+

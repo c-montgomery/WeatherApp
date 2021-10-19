@@ -1,0 +1,19 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "Weather app interacting with Open Weather APIs",
+  "main": "'./src/controller.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c-montgomery/WeatherApp.git"
+  },
+  "author": "Collin Montgomery",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/c-montgomery/WeatherApp/issues"
+  },
+  "homepage": "https://github.com/c-montgomery/WeatherApp#readme"
+}
