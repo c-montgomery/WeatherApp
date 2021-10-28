@@ -5,7 +5,7 @@ module.exports = {
   mode: 'development',
   entry: './src/controller.js',
   output: {
-    filename: 'bundle.js',
+    filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
   devtool: 'source-map',
