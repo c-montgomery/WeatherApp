@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html{\n    background-color: rgb(65, 182, 143);\n    display: grid;\n    justify-content: center;\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,mCAAmC;IACnC,aAAa;IACb,uBAAuB;AAC3B;AACA;IACI,gBAAgB;IAChB,YAAY;IACZ,mBAAmB;AACvB","sourcesContent":["html{\n    background-color: rgb(65, 182, 143);\n    display: grid;\n    justify-content: center;\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html{\n    background-color: rgba(65, 182, 143, 0.523);\n    display: grid;\n    justify-content: center;\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n    height: 30px;\n    width: 400px;\n}\n.fade{\n    visibility: hidden;\n    opacity: 0;\n    transition: visibility 0s .2s, opacity .2s ease-out;  \n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,2CAA2C;IAC3C,aAAa;IACb,uBAAuB;AAC3B;AACA;IACI,gBAAgB;IAChB,YAAY;IACZ,mBAAmB;IACnB,YAAY;IACZ,YAAY;AAChB;AACA;IACI,kBAAkB;IAClB,UAAU;IACV,mDAAmD;AACvD","sourcesContent":["html{\n    background-color: rgba(65, 182, 143, 0.523);\n    display: grid;\n    justify-content: center;\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n    height: 30px;\n    width: 400px;\n}\n.fade{\n    visibility: hidden;\n    opacity: 0;\n    transition: visibility 0s .2s, opacity .2s ease-out;  \n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -627,16 +627,30 @@ __webpack_require__.r(__webpack_exports__);
 
 let html = document.querySelector('html')
 
+let input = document.querySelector('input')
+window.addEventListener('keydown',(e)=> {
+    Weather.checkKey(e)
+    
+})
+
+
 class Weather{
     constructor(zip){
     this.zip = zip
     }
-    get window(){
+    get makeWindow(){
+        input.className = 'fade'
         return window
     }
     retrieve(zip){
         const query = `http://api.openweathermap.org/data/2.5/weather?q=${zip}&APPID=${_apikey__WEBPACK_IMPORTED_MODULE_0__.API_KEY}`
         return query
+    }
+    static checkKey(e){
+        if (e.code == 'Enter'){
+            let mainWindow = new Weather();
+            mainWindow.makeWindow
+        }
     }
 }
 })();

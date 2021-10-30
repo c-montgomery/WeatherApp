@@ -1,5 +1,5 @@
 html{
-    background-color: rgb(65, 182, 143);
+    background-color: rgba(65, 182, 143, 0.523);
     display: grid;
     justify-content: center;
 }
@@ -7,4 +7,11 @@ input{
     margin-top: 20px;
     border: none;
     border-radius: 10px;
+    height: 30px;
+    width: 400px;
+}
+.fade{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s .2s, opacity .2s ease-out;  
 }
