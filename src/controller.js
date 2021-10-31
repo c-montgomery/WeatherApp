@@ -15,6 +15,18 @@ class Weather{
     }
     get makeWindow(){
         input.className = 'fade'
+        let window = document.createElement('main')
+        window.className = 'window'
+        window.textContent = 'WEATHERINFO'
+
+        let windowHeader = document.createElement('div');
+        windowHeader.className = 'windowHeader'
+        let windowBody = document.createElement('div');
+        windowBody.className = 'windowBody'
+
+        window.appendChild(windowHeader)
+        window.appendChild(windowBody)
+        
         return window
     }
     retrieve(zip){
@@ -24,7 +36,7 @@ class Weather{
     static checkKey(e){
         if (e.code == 'Enter'){
             let mainWindow = new Weather();
-            mainWindow.makeWindow
+            html.appendChild(mainWindow.makeWindow)
         }
     }
 }

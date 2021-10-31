@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html{\n    background-color: rgba(65, 182, 143, 0.523);\n    display: grid;\n    justify-content: center;\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n    height: 30px;\n    width: 400px;\n}\n.fade{\n    visibility: hidden;\n    opacity: 0;\n    transition: visibility 0s .2s, opacity .2s ease-out;  \n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,2CAA2C;IAC3C,aAAa;IACb,uBAAuB;AAC3B;AACA;IACI,gBAAgB;IAChB,YAAY;IACZ,mBAAmB;IACnB,YAAY;IACZ,YAAY;AAChB;AACA;IACI,kBAAkB;IAClB,UAAU;IACV,mDAAmD;AACvD","sourcesContent":["html{\n    background-color: rgba(65, 182, 143, 0.523);\n    display: grid;\n    justify-content: center;\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n    height: 30px;\n    width: 400px;\n}\n.fade{\n    visibility: hidden;\n    opacity: 0;\n    transition: visibility 0s .2s, opacity .2s ease-out;  \n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html{\n    background-color: rgba(65, 182, 143, 0.523);\n    display: grid;\n    justify-content: center;\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n    height: 30px;\n    width: 400px;\n}\n.fade{\n    visibility: hidden;\n    opacity: 0;\n    transition: visibility 0s .2s, opacity .2s ease-out;  \n}\n.window{\n    display: grid;\n    grid-template-rows: 3;\n    grid-template-columns: 3;\n\n    border: solid red 1px;\n    width: 400px;\n    height: 400px;\n\n}\n.windowHeader{\n}\n.windowBody{\n\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,2CAA2C;IAC3C,aAAa;IACb,uBAAuB;AAC3B;AACA;IACI,gBAAgB;IAChB,YAAY;IACZ,mBAAmB;IACnB,YAAY;IACZ,YAAY;AAChB;AACA;IACI,kBAAkB;IAClB,UAAU;IACV,mDAAmD;AACvD;AACA;IACI,aAAa;IACb,qBAAqB;IACrB,wBAAwB;;IAExB,qBAAqB;IACrB,YAAY;IACZ,aAAa;;AAEjB;AACA;AACA;AACA;;AAEA","sourcesContent":["html{\n    background-color: rgba(65, 182, 143, 0.523);\n    display: grid;\n    justify-content: center;\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n    height: 30px;\n    width: 400px;\n}\n.fade{\n    visibility: hidden;\n    opacity: 0;\n    transition: visibility 0s .2s, opacity .2s ease-out;  \n}\n.window{\n    display: grid;\n    grid-template-rows: 3;\n    grid-template-columns: 3;\n\n    border: solid red 1px;\n    width: 400px;\n    height: 400px;\n\n}\n.windowHeader{\n}\n.windowBody{\n\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -640,6 +640,18 @@ class Weather{
     }
     get makeWindow(){
         input.className = 'fade'
+        let window = document.createElement('main')
+        window.className = 'window'
+        window.textContent = 'WEATHERINFO'
+
+        let windowHeader = document.createElement('div');
+        windowHeader.className = 'windowHeader'
+        let windowBody = document.createElement('div');
+        windowBody.className = 'windowBody'
+
+        window.appendChild(windowHeader)
+        window.appendChild(windowBody)
+        
         return window
     }
     retrieve(zip){
@@ -649,7 +661,7 @@ class Weather{
     static checkKey(e){
         if (e.code == 'Enter'){
             let mainWindow = new Weather();
-            mainWindow.makeWindow
+            html.appendChild(mainWindow.makeWindow)
         }
     }
 }
