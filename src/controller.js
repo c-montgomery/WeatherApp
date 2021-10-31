@@ -1,10 +1,18 @@
 import {API_KEY} from './apikey'
 import './style.css'
+import pic from './background.jpg'
+
+let thing = new Image()
+thing.src = pic
+
 let html = document.querySelector('html')
+
 
 let input = document.querySelector('input')
 window.addEventListener('keydown',(e)=> {
     Weather.checkKey(e)
+    let info = new Weather()
+    info.retrieve(85014)
     
 })
 
@@ -17,7 +25,6 @@ class Weather{
         input.className = 'fade'
         let window = document.createElement('main')
         window.className = 'window'
-        window.textContent = 'WEATHERINFO'
 
         let windowHeader = document.createElement('div');
         windowHeader.className = 'windowHeader'
@@ -30,8 +37,19 @@ class Weather{
         return window
     }
     retrieve(zip){
-        const query = `http://api.openweathermap.org/data/2.5/weather?q=${zip}&APPID=${API_KEY}`
-        return query
+        const img = document.querySelector('img');
+        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${zip}&APPID=${API_KEY}`, {mode: 'cors'})
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(response) {
+            let words = document.querySelector('main')
+            words.textContent = response.weather[0].description
+            console.log(response.weather[0].description)
+            console.log(response.body)
+            
+        });
+
     }
     static checkKey(e){
         if (e.code == 'Enter'){
@@ -40,3 +58,7 @@ class Weather{
         }
     }
 }
+
+
+
+
