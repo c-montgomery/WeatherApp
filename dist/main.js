@@ -26,7 +26,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html{\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    display: grid;\n    justify-content: center;\n    background-size: cover;\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n    height: 30px;\n    width: 400px;\n}\n.fade{\n    visibility: hidden;\n    opacity: 0;\n    transition: visibility 0s .2s, opacity .2s ease-out;  \n}\n.window{\n    color: white;\n    display: grid;\n    grid-template-rows: 1fr 2fr;\n\n    border-radius: 10px;\n\n    border: solid red 1px;\n    width: 400px;\n    height: 400px;\n    box-shadow: inset 0 0 2000px rgba(18, 17, 17, 0.5);\n    background-color: rgba(0, 0, 0, 0.742);\n    -webkit-backdrop-filter: blur(1em);\n    backdrop-filter: blur(2em);\n}\n.windowHeader{\n    border: gold solid 1px;\n    \n}\n.windowBody{\n    border: green solid 1px \n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,mDAAmC;IACnC,aAAa;IACb,uBAAuB;IACvB,sBAAsB;AAC1B;AACA;IACI,gBAAgB;IAChB,YAAY;IACZ,mBAAmB;IACnB,YAAY;IACZ,YAAY;AAChB;AACA;IACI,kBAAkB;IAClB,UAAU;IACV,mDAAmD;AACvD;AACA;IACI,YAAY;IACZ,aAAa;IACb,2BAA2B;;IAE3B,mBAAmB;;IAEnB,qBAAqB;IACrB,YAAY;IACZ,aAAa;IACb,kDAAkD;IAClD,sCAAsC;IACtC,kCAAkC;IAClC,0BAA0B;AAC9B;AACA;IACI,sBAAsB;;AAE1B;AACA;IACI;AACJ","sourcesContent":["html{\n    background: url('./background.jpg');\n    display: grid;\n    justify-content: center;\n    background-size: cover;\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n    height: 30px;\n    width: 400px;\n}\n.fade{\n    visibility: hidden;\n    opacity: 0;\n    transition: visibility 0s .2s, opacity .2s ease-out;  \n}\n.window{\n    color: white;\n    display: grid;\n    grid-template-rows: 1fr 2fr;\n\n    border-radius: 10px;\n\n    border: solid red 1px;\n    width: 400px;\n    height: 400px;\n    box-shadow: inset 0 0 2000px rgba(18, 17, 17, 0.5);\n    background-color: rgba(0, 0, 0, 0.742);\n    -webkit-backdrop-filter: blur(1em);\n    backdrop-filter: blur(2em);\n}\n.windowHeader{\n    border: gold solid 1px;\n    \n}\n.windowBody{\n    border: green solid 1px \n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html{\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    display: grid;\n    justify-content: center;\n    background-size: cover;\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n    height: 30px;\n    width: 400px;\n}\n.fade{\n    visibility: hidden;\n    opacity: 0;\n    transition: visibility 0s .2s, opacity .2s ease-out;  \n}\n.window{\n    color: white;\n    display: grid;\n    grid-template-rows: 1fr 2fr;\n\n    border-radius: 10px;\n\n    border: solid red 1px;\n    width: 400px;\n    height: 400px;\n    box-shadow: inset 0 0 2000px rgba(18, 17, 17, 0.5);\n    background-color: rgba(0, 0, 0, 0.742);\n    -webkit-backdrop-filter: blur(1em);\n    backdrop-filter: blur(2em);\n}\n.windowHeader{\n    border: gold solid 3px;\n    \n}\n.windowBody{\n    border: green solid 3px \n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,mDAAmC;IACnC,aAAa;IACb,uBAAuB;IACvB,sBAAsB;AAC1B;AACA;IACI,gBAAgB;IAChB,YAAY;IACZ,mBAAmB;IACnB,YAAY;IACZ,YAAY;AAChB;AACA;IACI,kBAAkB;IAClB,UAAU;IACV,mDAAmD;AACvD;AACA;IACI,YAAY;IACZ,aAAa;IACb,2BAA2B;;IAE3B,mBAAmB;;IAEnB,qBAAqB;IACrB,YAAY;IACZ,aAAa;IACb,kDAAkD;IAClD,sCAAsC;IACtC,kCAAkC;IAClC,0BAA0B;AAC9B;AACA;IACI,sBAAsB;;AAE1B;AACA;IACI;AACJ","sourcesContent":["html{\n    background: url('./background.jpg');\n    display: grid;\n    justify-content: center;\n    background-size: cover;\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n    height: 30px;\n    width: 400px;\n}\n.fade{\n    visibility: hidden;\n    opacity: 0;\n    transition: visibility 0s .2s, opacity .2s ease-out;  \n}\n.window{\n    color: white;\n    display: grid;\n    grid-template-rows: 1fr 2fr;\n\n    border-radius: 10px;\n\n    border: solid red 1px;\n    width: 400px;\n    height: 400px;\n    box-shadow: inset 0 0 2000px rgba(18, 17, 17, 0.5);\n    background-color: rgba(0, 0, 0, 0.742);\n    -webkit-backdrop-filter: blur(1em);\n    backdrop-filter: blur(2em);\n}\n.windowHeader{\n    border: gold solid 3px;\n    \n}\n.windowBody{\n    border: green solid 3px \n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -587,9 +587,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-let html = document.querySelector('html')
 let input = document.querySelector('input')
-
+let html = document.querySelector('html')
 
 class Weather{
     
@@ -607,6 +606,7 @@ class Weather{
         let windowBody = document.createElement('div');
         windowBody.className = 'windowBody'
 
+        window.appendChild(windowHeader)
         window.appendChild(windowBody)
         
         return window
@@ -619,10 +619,15 @@ class Weather{
             return response.json();
         })
         .then(function(response) {
-            let words = document.querySelector('main')
+            let words = document.querySelector('.windowHeader')
             words.textContent = response.weather[0].description
             console.log(response.weather[0].description)
-            console.log((response.main.temp - 273.15) * 9/5 + 32)
+            let temp = ((response.main.temp - 273.15) * 9/5 + 32)
+            let windowHeader = document.querySelector('.windowBody')
+            let para = document.createElement('p');
+            para.textContent = temp
+            console.log(temp)
+            windowHeader.appendChild(para)
             
         });
 
@@ -812,6 +817,7 @@ __webpack_require__.r(__webpack_exports__);
 let thing = new Image()
 thing.src = _background_jpg__WEBPACK_IMPORTED_MODULE_1__
 
+let html = document.querySelector('html')
 
 let input = document.querySelector('input')
 window.addEventListener('keydown',(e)=> {

@@ -1,9 +1,8 @@
 import {API_KEY} from './apikey'
 
 
-let html = document.querySelector('html')
 let input = document.querySelector('input')
-
+let html = document.querySelector('html')
 
 class Weather{
     
@@ -21,6 +20,7 @@ class Weather{
         let windowBody = document.createElement('div');
         windowBody.className = 'windowBody'
 
+        window.appendChild(windowHeader)
         window.appendChild(windowBody)
         
         return window
@@ -33,10 +33,15 @@ class Weather{
             return response.json();
         })
         .then(function(response) {
-            let words = document.querySelector('main')
+            let words = document.querySelector('.windowHeader')
             words.textContent = response.weather[0].description
             console.log(response.weather[0].description)
-            console.log((response.main.temp - 273.15) * 9/5 + 32)
+            let temp = ((response.main.temp - 273.15) * 9/5 + 32)
+            let windowHeader = document.querySelector('.windowBody')
+            let para = document.createElement('p');
+            para.textContent = temp
+            console.log(temp)
+            windowHeader.appendChild(para)
             
         });
 

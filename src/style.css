@@ -32,9 +32,9 @@ input{
     backdrop-filter: blur(2em);
 }
 .windowHeader{
-    border: gold solid 1px;
+    border: gold solid 3px;
     
 }
 .windowBody{
-    border: green solid 1px 
+    border: green solid 3px 
 }
