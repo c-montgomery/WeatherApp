@@ -46,12 +46,11 @@ class Weather{
         });
 
     }
-    static checkKey(e){
-        if (e.code == 'Enter'){
-            let mainWindow = new Weather();
-            html.appendChild(mainWindow.makeWindow)
-        }
+    static attachWindow(e){
+        let mainWindow = new Weather();
+        html.appendChild(mainWindow.makeWindow)
     }
+    
 }
 
 export{ Weather }

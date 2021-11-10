@@ -3,6 +3,7 @@ html{
     display: grid;
     justify-content: center;
     background-size: cover;
+    height: 100%
 }
 input{
     margin-top: 20px;
