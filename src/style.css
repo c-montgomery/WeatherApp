@@ -33,9 +33,15 @@ input{
     backdrop-filter: blur(2em);
 }
 .windowHeader{
-    border: gold solid 3px;
+    border: rgb(97, 219, 162) solid 3px;
+    display: flex;
+    justify-content: center;
     
 }
 .windowBody{
     border: green solid 3px 
+}
+.headerRight{
+    flex: 2;
+    border-color: red;
 }

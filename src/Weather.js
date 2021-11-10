@@ -20,6 +20,13 @@ class Weather{
         let windowBody = document.createElement('div');
         windowBody.className = 'windowBody'
 
+        let headerLeft = document.createElement('div');
+        headerLeft.className = 'headerLeft'
+        let headerRight = document.createElement('div');
+        headerRight.className = 'headerRight'
+        windowHeader.appendChild(headerLeft)
+        windowHeader.appendChild(headerRight)
+
         window.appendChild(windowHeader)
         window.appendChild(windowBody)
         
@@ -33,7 +40,7 @@ class Weather{
             return response.json();
         })
         .then(function(response) {
-            let words = document.querySelector('.windowHeader')
+            let words = document.querySelector('.headerLeft')
             words.textContent = response.weather[0].description
             console.log(response.weather[0].description)
             let temp = ((response.main.temp - 273.15) * 9/5 + 32)
