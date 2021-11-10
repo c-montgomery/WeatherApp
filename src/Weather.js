@@ -44,11 +44,11 @@ class Weather{
             words.textContent = response.weather[0].description
             console.log(response.weather[0].description)
             let temp = ((response.main.temp - 273.15) * 9/5 + 32)
-            let windowHeader = document.querySelector('.windowBody')
+            let headerRight = document.querySelector('.headerRight')
             let para = document.createElement('p');
-            para.textContent = temp
+            para.textContent = Math.round(temp)
             console.log(temp)
-            windowHeader.appendChild(para)
+            headerRight.appendChild(para)
             
         });
 
