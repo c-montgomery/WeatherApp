@@ -44,7 +44,9 @@ input{
 .headerRight{
     flex: 1;
     border-color: rgb(255, 255, 255);
-    border: 2px solid
+    border: 2px solid;
+    text-align: center;
+    line-height: 95px;
 }
 
 .headerLeft{

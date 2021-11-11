@@ -14,7 +14,6 @@ window.addEventListener('keydown',(e)=> {
         Weather.attachWindow(e)
         let info = new Weather()
         let input = document.querySelector('input')
-        console.log(input.value)
         info.retrieve(input.value)
     }
     

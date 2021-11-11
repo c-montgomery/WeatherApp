@@ -1,6 +1,7 @@
 import {API_KEY} from './apikey'
 
 
+
 let input = document.querySelector('input')
 let html = document.querySelector('html')
 
@@ -42,6 +43,7 @@ class Weather{
         .then(function(response) {
             let words = document.querySelector('.headerLeft')
             words.textContent = response.weather[0].description
+            console.log(response)
             console.log(response.weather[0].description)
             let temp = ((response.main.temp - 273.15) * 9/5 + 32)
             let headerRight = document.querySelector('.headerRight')
@@ -50,8 +52,21 @@ class Weather{
             console.log(temp)
             headerRight.appendChild(para)
             
-        });
+        })
+        .then(()=>this.convert(this.zip));
 
+    }
+
+    convert = (zip)=>{
+        console.log(this.zip)
+        fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${this.zip}&appid=${API_KEY}`, {mode: 'cors'})
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(response){
+            let name = response.name
+            console.log(name)
+        })
     }
     static attachWindow(e){
         let mainWindow = new Weather();

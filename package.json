@@ -107,12 +107,14 @@
     "tapable": "^2.2.1",
     "terser": "^5.9.0",
     "terser-webpack-plugin": "^5.2.4",
+    "uninstall": "^0.0.0",
     "uri-js": "^4.4.1",
     "watchpack": "^2.2.0",
     "webpack-merge": "^5.8.0",
     "webpack-sources": "^3.2.1",
     "which": "^2.0.2",
     "wildcard": "^2.0.0",
+    "worldcities": "^0.1.7",
     "yocto-queue": "^0.1.0"
   },
   "keywords": []
