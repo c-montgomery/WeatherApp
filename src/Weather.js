@@ -47,6 +47,7 @@ class Weather{
             console.log(response.weather[0].description)
             let temp = ((response.main.temp - 273.15) * 9/5 + 32)
             let headerRight = document.querySelector('.headerRight')
+
             let para = document.createElement('p');
             para.textContent = Math.round(temp)
             console.log(temp)
