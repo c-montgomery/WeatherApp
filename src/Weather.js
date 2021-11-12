@@ -77,9 +77,10 @@ class Weather{
             return response.json();
         })
         .then(function(response){
-            let name = response.name
             console.log(response)
-            console.log(name)
+            let name = response.name
+            let headerLeft = document.querySelector('.headerLeft');
+            headerLeft.textContent = name + ", " + response.zip;
         })
     }
     static attachWindow(e){
