@@ -25,6 +25,17 @@ class Weather{
         headerLeft.className = 'headerLeft'
         let headerRight = document.createElement('div');
         headerRight.className = 'headerRight'
+        let headerRightTop = document.createElement('div');
+        headerRightTop.className = 'headerRightTop'
+        let headerRightMiddle = document.createElement('div');
+        headerRightMiddle.className = 'headerRightMiddle'
+        let headerRightBottom = document.createElement('div');
+        headerRightBottom.className = 'headerRightBottom';
+
+        headerRight.appendChild(headerRightTop);
+        headerRight.appendChild(headerRightMiddle);
+        headerRight.appendChild(headerRightBottom)
+
         windowHeader.appendChild(headerLeft)
         windowHeader.appendChild(headerRight)
 
@@ -41,15 +52,16 @@ class Weather{
             return response.json();
         })
         .then(function(response) {
-            let words = document.querySelector('.headerLeft')
+            let words = document.querySelector('.headerRightTop')
             words.textContent = response.weather[0].description
             console.log(response)
             console.log(response.weather[0].description)
             let temp = ((response.main.temp - 273.15) * 9/5 + 32)
-            let headerRight = document.querySelector('.headerRight')
-
+            let headerRight = document.querySelector('.headerRightMiddle')
+            let wind = document.querySelector('.headerRightBottom');
+            wind.textContent = 'Wind: ' +response.wind.speed + 'mph'
             let para = document.createElement('p');
-            para.textContent = Math.round(temp)
+            para.textContent = Math.round(temp)+'°'
             console.log(temp)
             headerRight.appendChild(para)
             
@@ -66,6 +78,7 @@ class Weather{
         })
         .then(function(response){
             let name = response.name
+            console.log(response)
             console.log(name)
         })
     }

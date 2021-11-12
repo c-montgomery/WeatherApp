@@ -24,9 +24,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./background.jpg */ "./src/background.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html{\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    display: grid;\n    justify-content: center;\n    background-size: cover;\n    height: 100%\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n    height: 30px;\n    width: 400px;\n}\n.fade{\n    visibility: hidden;\n    opacity: 0;\n    transition: visibility 0s .2s, opacity .2s ease-out;  \n}\n.window{\n    color: white;\n    display: grid;\n    \n    border-radius: 10px;\n    border: solid red 1px;\n    width: 400px;\n    height: 400px;\n    box-shadow: inset 0 0 2000px rgba(18, 17, 17, 0.5);\n    background-color: rgba(0, 0, 0, 0.742);\n  \n}\n.windowHeader{\n    display: grid;\n    grid-template-columns: repeat(3,1fr);\n    grid-template-rows: repeat(2,1fr);\n    border: rgb(97, 219, 162) solid 3px;\n    \n    justify-content: center;\n    \n}\n.windowBody{\n    border: green solid 3px \n}\n.headerRight{\n    grid-column: 3/4;\n    border-color: rgb(255, 255, 255);\n    border: 2px solid;\n    text-align: center;\n    line-height: 95px;\n    font-size: 55px;\n}\n\n.headerLeft{\n    \n    grid-column: 1/3;\n    border-color: purple;\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,mDAAmC;IACnC,aAAa;IACb,uBAAuB;IACvB,sBAAsB;IACtB;AACJ;AACA;IACI,gBAAgB;IAChB,YAAY;IACZ,mBAAmB;IACnB,YAAY;IACZ,YAAY;AAChB;AACA;IACI,kBAAkB;IAClB,UAAU;IACV,mDAAmD;AACvD;AACA;IACI,YAAY;IACZ,aAAa;;IAEb,mBAAmB;IACnB,qBAAqB;IACrB,YAAY;IACZ,aAAa;IACb,kDAAkD;IAClD,sCAAsC;;AAE1C;AACA;IACI,aAAa;IACb,oCAAoC;IACpC,iCAAiC;IACjC,mCAAmC;;IAEnC,uBAAuB;;AAE3B;AACA;IACI;AACJ;AACA;IACI,gBAAgB;IAChB,gCAAgC;IAChC,iBAAiB;IACjB,kBAAkB;IAClB,iBAAiB;IACjB,eAAe;AACnB;;AAEA;;IAEI,gBAAgB;IAChB,oBAAoB;AACxB","sourcesContent":["html{\n    background: url('./background.jpg');\n    display: grid;\n    justify-content: center;\n    background-size: cover;\n    height: 100%\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n    height: 30px;\n    width: 400px;\n}\n.fade{\n    visibility: hidden;\n    opacity: 0;\n    transition: visibility 0s .2s, opacity .2s ease-out;  \n}\n.window{\n    color: white;\n    display: grid;\n    \n    border-radius: 10px;\n    border: solid red 1px;\n    width: 400px;\n    height: 400px;\n    box-shadow: inset 0 0 2000px rgba(18, 17, 17, 0.5);\n    background-color: rgba(0, 0, 0, 0.742);\n  \n}\n.windowHeader{\n    display: grid;\n    grid-template-columns: repeat(3,1fr);\n    grid-template-rows: repeat(2,1fr);\n    border: rgb(97, 219, 162) solid 3px;\n    \n    justify-content: center;\n    \n}\n.windowBody{\n    border: green solid 3px \n}\n.headerRight{\n    grid-column: 3/4;\n    border-color: rgb(255, 255, 255);\n    border: 2px solid;\n    text-align: center;\n    line-height: 95px;\n    font-size: 55px;\n}\n\n.headerLeft{\n    \n    grid-column: 1/3;\n    border-color: purple;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html{\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    display: grid;\n    justify-content: center;\n    background-size: cover;\n    height: 100%;\n    font-family: 'Nunito', sans-serif;\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n    height: 30px;\n    width: 400px;\n}\n.fade{\n    visibility: hidden;\n    opacity: 0;\n    transition: visibility 0s .2s, opacity .2s ease-out;  \n}\n.window{\n    color: white;\n    display: grid;\n    \n    border-radius: 10px;\n    border: solid red 1px;\n    width: 400px;\n    height: 400px;\n    box-shadow: inset 0 0 2000px rgba(18, 17, 17, 0.5);\n    background-color: rgba(0, 0, 0, 0.742);\n  \n}\n.windowHeader{\n    display: grid;\n    grid-template-columns: repeat(3,1fr);\n    grid-template-rows: repeat(2,1fr);\n    border: rgb(97, 219, 162) solid 3px;\n    \n    justify-content: center;\n    \n}\n.windowBody{\n    border: green solid 3px \n}\n.headerRight{\n    display: grid;\n    grid-template-rows: 1fr, 3fr, 1fr;\n    grid-column: 3/4;\n    grid-row:1fr;\n    border-color: rgb(255, 255, 255);\n    border: 2px solid;\n    text-align: center;\n    line-height: 25px;\n    font-size: 55px;\n}\n.headerRightTop{\n    font-size: 25px;\n    line-height:24px;\n}\n\n.headerRightMiddle{\n    grid-row: 2/4;\n}\n\n.headerRightBottom{\n    grid-row: 4/5;\n    font-size:16px;\n}\n\n.headerLeft{\n    \n    grid-column: 1/3;\n    border-color: purple;\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAEA;IACI,mDAAmC;IACnC,aAAa;IACb,uBAAuB;IACvB,sBAAsB;IACtB,YAAY;IACZ,iCAAiC;AACrC;AACA;IACI,gBAAgB;IAChB,YAAY;IACZ,mBAAmB;IACnB,YAAY;IACZ,YAAY;AAChB;AACA;IACI,kBAAkB;IAClB,UAAU;IACV,mDAAmD;AACvD;AACA;IACI,YAAY;IACZ,aAAa;;IAEb,mBAAmB;IACnB,qBAAqB;IACrB,YAAY;IACZ,aAAa;IACb,kDAAkD;IAClD,sCAAsC;;AAE1C;AACA;IACI,aAAa;IACb,oCAAoC;IACpC,iCAAiC;IACjC,mCAAmC;;IAEnC,uBAAuB;;AAE3B;AACA;IACI;AACJ;AACA;IACI,aAAa;IACb,iCAAiC;IACjC,gBAAgB;IAChB,YAAY;IACZ,gCAAgC;IAChC,iBAAiB;IACjB,kBAAkB;IAClB,iBAAiB;IACjB,eAAe;AACnB;AACA;IACI,eAAe;IACf,gBAAgB;AACpB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,cAAc;AAClB;;AAEA;;IAEI,gBAAgB;IAChB,oBAAoB;AACxB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');\n\nhtml{\n    background: url('./background.jpg');\n    display: grid;\n    justify-content: center;\n    background-size: cover;\n    height: 100%;\n    font-family: 'Nunito', sans-serif;\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n    height: 30px;\n    width: 400px;\n}\n.fade{\n    visibility: hidden;\n    opacity: 0;\n    transition: visibility 0s .2s, opacity .2s ease-out;  \n}\n.window{\n    color: white;\n    display: grid;\n    \n    border-radius: 10px;\n    border: solid red 1px;\n    width: 400px;\n    height: 400px;\n    box-shadow: inset 0 0 2000px rgba(18, 17, 17, 0.5);\n    background-color: rgba(0, 0, 0, 0.742);\n  \n}\n.windowHeader{\n    display: grid;\n    grid-template-columns: repeat(3,1fr);\n    grid-template-rows: repeat(2,1fr);\n    border: rgb(97, 219, 162) solid 3px;\n    \n    justify-content: center;\n    \n}\n.windowBody{\n    border: green solid 3px \n}\n.headerRight{\n    display: grid;\n    grid-template-rows: 1fr, 3fr, 1fr;\n    grid-column: 3/4;\n    grid-row:1fr;\n    border-color: rgb(255, 255, 255);\n    border: 2px solid;\n    text-align: center;\n    line-height: 25px;\n    font-size: 55px;\n}\n.headerRightTop{\n    font-size: 25px;\n    line-height:24px;\n}\n\n.headerRightMiddle{\n    grid-row: 2/4;\n}\n\n.headerRightBottom{\n    grid-row: 4/5;\n    font-size:16px;\n}\n\n.headerLeft{\n    \n    grid-column: 1/3;\n    border-color: purple;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -611,6 +612,17 @@ class Weather{
         headerLeft.className = 'headerLeft'
         let headerRight = document.createElement('div');
         headerRight.className = 'headerRight'
+        let headerRightTop = document.createElement('div');
+        headerRightTop.className = 'headerRightTop'
+        let headerRightMiddle = document.createElement('div');
+        headerRightMiddle.className = 'headerRightMiddle'
+        let headerRightBottom = document.createElement('div');
+        headerRightBottom.className = 'headerRightBottom';
+
+        headerRight.appendChild(headerRightTop);
+        headerRight.appendChild(headerRightMiddle);
+        headerRight.appendChild(headerRightBottom)
+
         windowHeader.appendChild(headerLeft)
         windowHeader.appendChild(headerRight)
 
@@ -627,15 +639,16 @@ class Weather{
             return response.json();
         })
         .then(function(response) {
-            let words = document.querySelector('.headerLeft')
+            let words = document.querySelector('.headerRightTop')
             words.textContent = response.weather[0].description
             console.log(response)
             console.log(response.weather[0].description)
             let temp = ((response.main.temp - 273.15) * 9/5 + 32)
-            let headerRight = document.querySelector('.headerRight')
-
+            let headerRight = document.querySelector('.headerRightMiddle')
+            let wind = document.querySelector('.headerRightBottom');
+            wind.textContent = 'Wind: ' +response.wind.speed + 'mph'
             let para = document.createElement('p');
-            para.textContent = Math.round(temp)
+            para.textContent = Math.round(temp)+'°'
             console.log(temp)
             headerRight.appendChild(para)
             
@@ -652,6 +665,7 @@ class Weather{
         })
         .then(function(response){
             let name = response.name
+            console.log(response)
             console.log(name)
         })
     }
