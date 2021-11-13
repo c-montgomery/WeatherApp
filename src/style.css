@@ -69,7 +69,7 @@ input{
 }
 
 .headerLeft{
-
+    padding: 10px 20px;
     font-family: 'Bebas Neue', cursive;
     font-size: 45px;
     grid-column: 1/3;

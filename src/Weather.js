@@ -47,11 +47,12 @@ class Weather{
     retrieve(zipCode){
         this.zip = zipCode
         const img = document.querySelector('img');
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.zip}&APPID=${API_KEY}`, {mode: 'cors'})
+        fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${this.zip}&APPID=${API_KEY}`, {mode: 'cors'})
         .then(function(response) {
             return response.json();
         })
         .then(function(response) {
+            
             let words = document.querySelector('.headerRightTop')
             words.textContent = response.weather[0].description
             console.log(response)
