@@ -585,6 +585,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Weather": () => (/* binding */ Weather)
 /* harmony export */ });
 /* harmony import */ var _apikey__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./apikey */ "./src/apikey.js");
+/* harmony import */ var _Weather_SVGs_tempUnit_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Weather_SVGs/tempUnit.svg */ "./src/Weather_SVGs/tempUnit.svg");
 
 
 
@@ -644,13 +645,17 @@ class Weather{
             words.textContent = response.weather[0].description
             console.log(response)
             console.log(response.weather[0].description)
+            let tempSVG = new Image();
+            tempSVG.src = _Weather_SVGs_tempUnit_svg__WEBPACK_IMPORTED_MODULE_1__;
             let temp = ((response.main.temp - 273.15) * 9/5 + 32)
             let headerRight = document.querySelector('.headerRightMiddle')
+
             let wind = document.querySelector('.headerRightBottom');
             wind.textContent = 'Wind: ' +response.wind.speed + 'mph'
             let para = document.createElement('p');
-            para.textContent = Math.round(temp)+'°'
-            console.log(temp)
+            para.textContent = Math.round(temp)
+
+            para.appendChild(tempSVG)
             headerRight.appendChild(para)
             
         })
@@ -695,6 +700,16 @@ __webpack_require__.r(__webpack_exports__);
 const API_KEY = '57b9d44519789e4e34d6570a37d7976d'
 
 
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/tempUnit.svg":
+/*!***************************************!*\
+  !*** ./src/Weather_SVGs/tempUnit.svg ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "2767b82106e693efedfe.svg";
 
 /***/ }),
 

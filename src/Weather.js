@@ -1,5 +1,5 @@
 import {API_KEY} from './apikey'
-
+import tempUnit from './Weather_SVGs/tempUnit.svg'
 
 
 let input = document.querySelector('input')
@@ -57,13 +57,17 @@ class Weather{
             words.textContent = response.weather[0].description
             console.log(response)
             console.log(response.weather[0].description)
+            let tempSVG = new Image();
+            tempSVG.src = tempUnit;
             let temp = ((response.main.temp - 273.15) * 9/5 + 32)
             let headerRight = document.querySelector('.headerRightMiddle')
+
             let wind = document.querySelector('.headerRightBottom');
             wind.textContent = 'Wind: ' +response.wind.speed + 'mph'
             let para = document.createElement('p');
-            para.textContent = Math.round(temp)+'°'
-            console.log(temp)
+            para.textContent = Math.round(temp)
+
+            para.appendChild(tempSVG)
             headerRight.appendChild(para)
             
         })
