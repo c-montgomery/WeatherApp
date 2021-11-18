@@ -59,9 +59,14 @@ input{
     line-height:24px;
 }
 
+.headerRightMiddle img{
+    padding: 15px;
+}
+
 .headerRightMiddle{
     grid-row: 2/4;
 }
+
 
 .headerRightBottom{
     grid-row: 4/5;
