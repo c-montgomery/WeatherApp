@@ -1,5 +1,5 @@
 import {API_KEY} from './apikey'
-import tempUnit from './Weather_SVGs/tempUnit.svg'
+import {Icon} from './Icon'
 
 
 let input = document.querySelector('input')
@@ -12,6 +12,7 @@ class Weather{
     }
     
     get makeWindow(){
+
         input.className = 'fade'
         let window = document.createElement('main')
         window.className = 'window'
@@ -58,16 +59,21 @@ class Weather{
             console.log(response)
             console.log(response.weather[0].description)
             let tempSVG = new Image();
-            tempSVG.src = tempUnit;
+            
             let temp = ((response.main.temp - 273.15) * 9/5 + 32)
             let headerRight = document.querySelector('.headerRightMiddle')
+
+            let weatherSVG = new Image(40,40)
+            let icon = new Icon('clouds')
+            weatherSVG.src = icon.image
+            let headerRightMiddle = document.querySelector('.headerRightMiddle')
+            headerRightMiddle.appendChild(weatherSVG)
 
             let wind = document.querySelector('.headerRightBottom');
             wind.textContent = 'Wind: ' +response.wind.speed + 'mph'
             let para = document.createElement('p');
-            para.textContent = Math.round(temp)
+            para.textContent = Math.round(temp)+'°'
 
-            para.appendChild(tempSVG)
             headerRight.appendChild(para)
             
         })

@@ -574,6 +574,33 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/Icon.js":
+/*!*********************!*\
+  !*** ./src/Icon.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Icon": () => (/* binding */ Icon)
+/* harmony export */ });
+/* harmony import */ var _Weather_SVGs_sw_01_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Weather_SVGs/sw-01.svg */ "./src/Weather_SVGs/sw-01.svg");
+
+
+class Icon{
+    constructor(weather){
+        this.weather = weather
+    }
+    get image(){
+        console.log(this.weather)
+        console.log('console printed')
+        return _Weather_SVGs_sw_01_svg__WEBPACK_IMPORTED_MODULE_0__
+    }
+}
+
+
+/***/ }),
+
 /***/ "./src/Weather.js":
 /*!************************!*\
   !*** ./src/Weather.js ***!
@@ -585,7 +612,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Weather": () => (/* binding */ Weather)
 /* harmony export */ });
 /* harmony import */ var _apikey__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./apikey */ "./src/apikey.js");
-/* harmony import */ var _Weather_SVGs_tempUnit_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Weather_SVGs/tempUnit.svg */ "./src/Weather_SVGs/tempUnit.svg");
+/* harmony import */ var _Icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Icon */ "./src/Icon.js");
 
 
 
@@ -600,6 +627,7 @@ class Weather{
     }
     
     get makeWindow(){
+
         input.className = 'fade'
         let window = document.createElement('main')
         window.className = 'window'
@@ -646,16 +674,21 @@ class Weather{
             console.log(response)
             console.log(response.weather[0].description)
             let tempSVG = new Image();
-            tempSVG.src = _Weather_SVGs_tempUnit_svg__WEBPACK_IMPORTED_MODULE_1__;
+            
             let temp = ((response.main.temp - 273.15) * 9/5 + 32)
             let headerRight = document.querySelector('.headerRightMiddle')
+
+            let weatherSVG = new Image(40,40)
+            let icon = new _Icon__WEBPACK_IMPORTED_MODULE_1__.Icon('clouds')
+            weatherSVG.src = icon.image
+            let headerRightMiddle = document.querySelector('.headerRightMiddle')
+            headerRightMiddle.appendChild(weatherSVG)
 
             let wind = document.querySelector('.headerRightBottom');
             wind.textContent = 'Wind: ' +response.wind.speed + 'mph'
             let para = document.createElement('p');
-            para.textContent = Math.round(temp)
+            para.textContent = Math.round(temp)+'°'
 
-            para.appendChild(tempSVG)
             headerRight.appendChild(para)
             
         })
@@ -703,13 +736,13 @@ const API_KEY = '57b9d44519789e4e34d6570a37d7976d'
 
 /***/ }),
 
-/***/ "./src/Weather_SVGs/tempUnit.svg":
-/*!***************************************!*\
-  !*** ./src/Weather_SVGs/tempUnit.svg ***!
-  \***************************************/
+/***/ "./src/Weather_SVGs/sw-01.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-01.svg ***!
+  \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "2767b82106e693efedfe.svg";
+module.exports = __webpack_require__.p + "23dfe02c0368bc83d2ca.svg";
 
 /***/ }),
 

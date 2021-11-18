@@ -1,4 +1,4 @@
-import tempUnit from './Weather_SVGs/tempUnit.svg'
+import tempUnit from './Weather_SVGs/sw-01.svg'
 
 class Icon{
     constructor(weather){
@@ -6,7 +6,8 @@ class Icon{
     }
     get image(){
         console.log(this.weather)
+        console.log('console printed')
         return tempUnit
     }
 }
-export { image }
+export { Icon }
