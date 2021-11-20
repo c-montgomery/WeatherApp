@@ -63,8 +63,8 @@ class Weather{
             let temp = ((response.main.temp - 273.15) * 9/5 + 32)
             let headerRight = document.querySelector('.headerRightMiddle')
 
-            let weatherSVG = new Image(40,40)
-            let icon = new Icon('clouds')
+            let weatherSVG = new Image(80,80)
+            let icon = new Icon(response.weather[0].id)
             weatherSVG.src = icon.image
             let headerRightMiddle = document.querySelector('.headerRightMiddle')
             headerRightMiddle.appendChild(weatherSVG)

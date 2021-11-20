@@ -62,6 +62,10 @@ input{
 .headerRightMiddle img{
     padding: 15px;
 }
+.headerRightMiddle p{
+    margin-top: 0px;
+    margin-bottom: 22px;
+}
 
 .headerRightMiddle{
     grid-row: 2/4;

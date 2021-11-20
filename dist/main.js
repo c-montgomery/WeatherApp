@@ -27,7 +27,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@600&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html{\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    display: grid;\n    justify-content: center;\n    background-size: cover;\n    height: 100%;\n    font-family: 'Nunito', sans-serif;\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n    height: 30px;\n    width: 400px;\n}\n.fade{\n    visibility: hidden;\n    opacity: 0;\n    transition: visibility 0s .2s, opacity .2s ease-out;  \n}\n.window{\n    color: white;\n    display: grid;\n    \n    border-radius: 10px;\n    border: solid red 1px;\n    width: 400px;\n    height: 400px;\n    box-shadow: inset 0 0 2000px rgba(18, 17, 17, 0.5);\n    background-color: rgba(0, 0, 0, 0.742);\n  \n}\n.windowHeader{\n    display: grid;\n    grid-template-columns: repeat(3,1fr);\n    grid-template-rows: repeat(2,1fr);\n    border: rgb(97, 219, 162) solid 3px;\n    \n    justify-content: center;\n    \n}\n.windowBody{\n    border: green solid 3px \n}\n.headerRight{\n    display: grid;\n    grid-template-rows: 1fr, 3fr, 1fr;\n    grid-column: 3/4;\n    grid-row:1fr;\n    border-color: rgb(255, 255, 255);\n    border: 2px solid;\n    text-align: center;\n    line-height: 25px;\n    font-size: 55px;\n}\n.headerRightTop{\n    font-size: 25px;\n    line-height:24px;\n}\n\n.headerRightMiddle img{\n    padding: 15px;\n}\n\n.headerRightMiddle{\n    grid-row: 2/4;\n}\n\n\n.headerRightBottom{\n    grid-row: 4/5;\n    font-size:16px;\n}\n\n.headerLeft{\n    padding: 10px 20px;\n    font-family: 'Bebas Neue', cursive;\n    font-size: 45px;\n    grid-column: 1/3;\n    border-color: purple;\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AACA;IACI,mDAAmC;IACnC,aAAa;IACb,uBAAuB;IACvB,sBAAsB;IACtB,YAAY;IACZ,iCAAiC;AACrC;AACA;IACI,gBAAgB;IAChB,YAAY;IACZ,mBAAmB;IACnB,YAAY;IACZ,YAAY;AAChB;AACA;IACI,kBAAkB;IAClB,UAAU;IACV,mDAAmD;AACvD;AACA;IACI,YAAY;IACZ,aAAa;;IAEb,mBAAmB;IACnB,qBAAqB;IACrB,YAAY;IACZ,aAAa;IACb,kDAAkD;IAClD,sCAAsC;;AAE1C;AACA;IACI,aAAa;IACb,oCAAoC;IACpC,iCAAiC;IACjC,mCAAmC;;IAEnC,uBAAuB;;AAE3B;AACA;IACI;AACJ;AACA;IACI,aAAa;IACb,iCAAiC;IACjC,gBAAgB;IAChB,YAAY;IACZ,gCAAgC;IAChC,iBAAiB;IACjB,kBAAkB;IAClB,iBAAiB;IACjB,eAAe;AACnB;AACA;IACI,eAAe;IACf,gBAAgB;AACpB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,aAAa;AACjB;;;AAGA;IACI,aAAa;IACb,cAAc;AAClB;;AAEA;IACI,kBAAkB;IAClB,kCAAkC;IAClC,eAAe;IACf,gBAAgB;IAChB,oBAAoB;AACxB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@600&display=swap');\nhtml{\n    background: url('./background.jpg');\n    display: grid;\n    justify-content: center;\n    background-size: cover;\n    height: 100%;\n    font-family: 'Nunito', sans-serif;\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n    height: 30px;\n    width: 400px;\n}\n.fade{\n    visibility: hidden;\n    opacity: 0;\n    transition: visibility 0s .2s, opacity .2s ease-out;  \n}\n.window{\n    color: white;\n    display: grid;\n    \n    border-radius: 10px;\n    border: solid red 1px;\n    width: 400px;\n    height: 400px;\n    box-shadow: inset 0 0 2000px rgba(18, 17, 17, 0.5);\n    background-color: rgba(0, 0, 0, 0.742);\n  \n}\n.windowHeader{\n    display: grid;\n    grid-template-columns: repeat(3,1fr);\n    grid-template-rows: repeat(2,1fr);\n    border: rgb(97, 219, 162) solid 3px;\n    \n    justify-content: center;\n    \n}\n.windowBody{\n    border: green solid 3px \n}\n.headerRight{\n    display: grid;\n    grid-template-rows: 1fr, 3fr, 1fr;\n    grid-column: 3/4;\n    grid-row:1fr;\n    border-color: rgb(255, 255, 255);\n    border: 2px solid;\n    text-align: center;\n    line-height: 25px;\n    font-size: 55px;\n}\n.headerRightTop{\n    font-size: 25px;\n    line-height:24px;\n}\n\n.headerRightMiddle img{\n    padding: 15px;\n}\n\n.headerRightMiddle{\n    grid-row: 2/4;\n}\n\n\n.headerRightBottom{\n    grid-row: 4/5;\n    font-size:16px;\n}\n\n.headerLeft{\n    padding: 10px 20px;\n    font-family: 'Bebas Neue', cursive;\n    font-size: 45px;\n    grid-column: 1/3;\n    border-color: purple;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html{\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    display: grid;\n    justify-content: center;\n    background-size: cover;\n    height: 100%;\n    font-family: 'Nunito', sans-serif;\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n    height: 30px;\n    width: 400px;\n}\n.fade{\n    visibility: hidden;\n    opacity: 0;\n    transition: visibility 0s .2s, opacity .2s ease-out;  \n}\n.window{\n    color: white;\n    display: grid;\n    \n    border-radius: 10px;\n    border: solid red 1px;\n    width: 400px;\n    height: 400px;\n    box-shadow: inset 0 0 2000px rgba(18, 17, 17, 0.5);\n    background-color: rgba(0, 0, 0, 0.742);\n  \n}\n.windowHeader{\n    display: grid;\n    grid-template-columns: repeat(3,1fr);\n    grid-template-rows: repeat(2,1fr);\n    border: rgb(97, 219, 162) solid 3px;\n    \n    justify-content: center;\n    \n}\n.windowBody{\n    border: green solid 3px \n}\n.headerRight{\n    display: grid;\n    grid-template-rows: 1fr, 3fr, 1fr;\n    grid-column: 3/4;\n    grid-row:1fr;\n    border-color: rgb(255, 255, 255);\n    border: 2px solid;\n    text-align: center;\n    line-height: 25px;\n    font-size: 55px;\n}\n.headerRightTop{\n    font-size: 25px;\n    line-height:24px;\n}\n\n.headerRightMiddle img{\n    padding: 15px;\n}\n.headerRightMiddle p{\n    margin-top: 0px;\n    margin-bottom: 22px;\n}\n\n.headerRightMiddle{\n    grid-row: 2/4;\n}\n\n\n.headerRightBottom{\n    grid-row: 4/5;\n    font-size:16px;\n}\n\n.headerLeft{\n    padding: 10px 20px;\n    font-family: 'Bebas Neue', cursive;\n    font-size: 45px;\n    grid-column: 1/3;\n    border-color: purple;\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AACA;IACI,mDAAmC;IACnC,aAAa;IACb,uBAAuB;IACvB,sBAAsB;IACtB,YAAY;IACZ,iCAAiC;AACrC;AACA;IACI,gBAAgB;IAChB,YAAY;IACZ,mBAAmB;IACnB,YAAY;IACZ,YAAY;AAChB;AACA;IACI,kBAAkB;IAClB,UAAU;IACV,mDAAmD;AACvD;AACA;IACI,YAAY;IACZ,aAAa;;IAEb,mBAAmB;IACnB,qBAAqB;IACrB,YAAY;IACZ,aAAa;IACb,kDAAkD;IAClD,sCAAsC;;AAE1C;AACA;IACI,aAAa;IACb,oCAAoC;IACpC,iCAAiC;IACjC,mCAAmC;;IAEnC,uBAAuB;;AAE3B;AACA;IACI;AACJ;AACA;IACI,aAAa;IACb,iCAAiC;IACjC,gBAAgB;IAChB,YAAY;IACZ,gCAAgC;IAChC,iBAAiB;IACjB,kBAAkB;IAClB,iBAAiB;IACjB,eAAe;AACnB;AACA;IACI,eAAe;IACf,gBAAgB;AACpB;;AAEA;IACI,aAAa;AACjB;AACA;IACI,eAAe;IACf,mBAAmB;AACvB;;AAEA;IACI,aAAa;AACjB;;;AAGA;IACI,aAAa;IACb,cAAc;AAClB;;AAEA;IACI,kBAAkB;IAClB,kCAAkC;IAClC,eAAe;IACf,gBAAgB;IAChB,oBAAoB;AACxB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@600&display=swap');\nhtml{\n    background: url('./background.jpg');\n    display: grid;\n    justify-content: center;\n    background-size: cover;\n    height: 100%;\n    font-family: 'Nunito', sans-serif;\n}\ninput{\n    margin-top: 20px;\n    border: none;\n    border-radius: 10px;\n    height: 30px;\n    width: 400px;\n}\n.fade{\n    visibility: hidden;\n    opacity: 0;\n    transition: visibility 0s .2s, opacity .2s ease-out;  \n}\n.window{\n    color: white;\n    display: grid;\n    \n    border-radius: 10px;\n    border: solid red 1px;\n    width: 400px;\n    height: 400px;\n    box-shadow: inset 0 0 2000px rgba(18, 17, 17, 0.5);\n    background-color: rgba(0, 0, 0, 0.742);\n  \n}\n.windowHeader{\n    display: grid;\n    grid-template-columns: repeat(3,1fr);\n    grid-template-rows: repeat(2,1fr);\n    border: rgb(97, 219, 162) solid 3px;\n    \n    justify-content: center;\n    \n}\n.windowBody{\n    border: green solid 3px \n}\n.headerRight{\n    display: grid;\n    grid-template-rows: 1fr, 3fr, 1fr;\n    grid-column: 3/4;\n    grid-row:1fr;\n    border-color: rgb(255, 255, 255);\n    border: 2px solid;\n    text-align: center;\n    line-height: 25px;\n    font-size: 55px;\n}\n.headerRightTop{\n    font-size: 25px;\n    line-height:24px;\n}\n\n.headerRightMiddle img{\n    padding: 15px;\n}\n.headerRightMiddle p{\n    margin-top: 0px;\n    margin-bottom: 22px;\n}\n\n.headerRightMiddle{\n    grid-row: 2/4;\n}\n\n\n.headerRightBottom{\n    grid-row: 4/5;\n    font-size:16px;\n}\n\n.headerLeft{\n    padding: 10px 20px;\n    font-family: 'Bebas Neue', cursive;\n    font-size: 45px;\n    grid-column: 1/3;\n    border-color: purple;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -595,37 +595,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Icon": () => (/* binding */ Icon)
 /* harmony export */ });
-/* harmony import */ var _Weather_SVGs_sw_01_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Weather_SVGs/sw-01.svg */ "./src/Weather_SVGs/sw-01.svg");
 
-//response.weather[0].id --weather category
 class Icon{
     constructor(weather){
         this.weather = weather
         this.icon = "sw-01"
     }
     get image(){
-        const coffee = __webpack_require__("./src/Weather_SVGs sync recursive ^\\.\\/.*\\.svg$")(`./${this.icon}.svg`);
-        console.log(this.weather)
-        console.log('console printed')
-        return _Weather_SVGs_sw_01_svg__WEBPACK_IMPORTED_MODULE_0__
-    }
-    set image(weatherGroupCode){
-        if(weatherGroupCode < 300){
+
+        if(this.weather < 300){
             this.icon = 'sw-27.svg';
-        }else if(weatherGroupCode<400){
+        }else if(this.weather<400){
             this.icon = 'sw-21.svg'; 
-        }else if(weatherGroupCode<600){
+        }else if(this.weather<600){
             this.icon = 'sw-22.svg';
-        }else if(weatherGroupCode<700){
+        }else if(this.weather<700){
             this.icon = 'sw-25.svg';
-        }else if(weatherGroupCode < 800){
+        }else if(this.weather < 800){
             this.icon = 'sw-10.svg';
-        }else if(weatherGroupCode == 800){
+        }else if(this.weather == 800){
             this.icon = 'sw-01.svg';
-        }else if(weatherGroupCode>800){
+        }else if(this.weather>800){
             this.icon = 'sw-04.svg'
         }
+        const weatherIcon = __webpack_require__("./src/Weather_SVGs sync recursive ^\\.\\/.*$")(`./${this.icon}`);
+        return weatherIcon
     }
+    
 }
 
 
@@ -709,8 +705,8 @@ class Weather{
             let temp = ((response.main.temp - 273.15) * 9/5 + 32)
             let headerRight = document.querySelector('.headerRightMiddle')
 
-            let weatherSVG = new Image(40,40)
-            let icon = new _Icon__WEBPACK_IMPORTED_MODULE_1__.Icon('clouds')
+            let weatherSVG = new Image(80,80)
+            let icon = new _Icon__WEBPACK_IMPORTED_MODULE_1__.Icon(response.weather[0].id)
             weatherSVG.src = icon.image
             let headerRightMiddle = document.querySelector('.headerRightMiddle')
             headerRightMiddle.appendChild(weatherSVG)
@@ -751,10 +747,10 @@ class Weather{
 
 /***/ }),
 
-/***/ "./src/Weather_SVGs sync recursive ^\\.\\/.*\\.svg$":
-/*!**********************************************!*\
-  !*** ./src/Weather_SVGs/ sync ^\.\/.*\.svg$ ***!
-  \**********************************************/
+/***/ "./src/Weather_SVGs sync recursive ^\\.\\/.*$":
+/*!*****************************************!*\
+  !*** ./src/Weather_SVGs/ sync ^\.\/.*$ ***!
+  \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
@@ -837,7 +833,7 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = "./src/Weather_SVGs sync recursive ^\\.\\/.*\\.svg$";
+webpackContext.id = "./src/Weather_SVGs sync recursive ^\\.\\/.*$";
 
 /***/ }),
 
