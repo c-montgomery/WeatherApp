@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/style.css":
@@ -8,6 +7,7 @@
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -40,6 +40,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "html{\n    background: url(" + ___CSS_
   \*****************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /*
@@ -151,6 +152,7 @@ module.exports = function (cssWithMappingToString) {
   \********************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 module.exports = function (url, options) {
@@ -189,6 +191,7 @@ module.exports = function (url, options) {
   \************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 module.exports = function (item) {
@@ -220,6 +223,7 @@ module.exports = function (item) {
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -274,6 +278,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var stylesInDOM = [];
@@ -387,6 +392,7 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var memo = {};
@@ -435,6 +441,7 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -455,6 +462,7 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -476,6 +484,7 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -555,6 +564,7 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -580,21 +590,41 @@ module.exports = styleTagTransform;
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Icon": () => (/* binding */ Icon)
 /* harmony export */ });
 /* harmony import */ var _Weather_SVGs_sw_01_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Weather_SVGs/sw-01.svg */ "./src/Weather_SVGs/sw-01.svg");
 
-
+//response.weather[0].id --weather category
 class Icon{
     constructor(weather){
         this.weather = weather
+        this.icon = "sw-01"
     }
     get image(){
+        const coffee = __webpack_require__("./src/Weather_SVGs sync recursive ^\\.\\/.*\\.svg$")(`./${this.icon}.svg`);
         console.log(this.weather)
         console.log('console printed')
         return _Weather_SVGs_sw_01_svg__WEBPACK_IMPORTED_MODULE_0__
+    }
+    set image(weatherGroupCode){
+        if(weatherGroupCode < 300){
+            this.icon = 'sw-27.svg';
+        }else if(weatherGroupCode<400){
+            this.icon = 'sw-21.svg'; 
+        }else if(weatherGroupCode<600){
+            this.icon = 'sw-22.svg';
+        }else if(weatherGroupCode<700){
+            this.icon = 'sw-25.svg';
+        }else if(weatherGroupCode < 800){
+            this.icon = 'sw-10.svg';
+        }else if(weatherGroupCode == 800){
+            this.icon = 'sw-01.svg';
+        }else if(weatherGroupCode>800){
+            this.icon = 'sw-04.svg'
+        }
     }
 }
 
@@ -607,6 +637,7 @@ class Icon{
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Weather": () => (/* binding */ Weather)
@@ -720,12 +751,103 @@ class Weather{
 
 /***/ }),
 
+/***/ "./src/Weather_SVGs sync recursive ^\\.\\/.*\\.svg$":
+/*!**********************************************!*\
+  !*** ./src/Weather_SVGs/ sync ^\.\/.*\.svg$ ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./sw-01.svg": "./src/Weather_SVGs/sw-01.svg",
+	"./sw-02.svg": "./src/Weather_SVGs/sw-02.svg",
+	"./sw-03.svg": "./src/Weather_SVGs/sw-03.svg",
+	"./sw-04.svg": "./src/Weather_SVGs/sw-04.svg",
+	"./sw-05.svg": "./src/Weather_SVGs/sw-05.svg",
+	"./sw-06.svg": "./src/Weather_SVGs/sw-06.svg",
+	"./sw-07.svg": "./src/Weather_SVGs/sw-07.svg",
+	"./sw-08.svg": "./src/Weather_SVGs/sw-08.svg",
+	"./sw-09.svg": "./src/Weather_SVGs/sw-09.svg",
+	"./sw-10.svg": "./src/Weather_SVGs/sw-10.svg",
+	"./sw-11.svg": "./src/Weather_SVGs/sw-11.svg",
+	"./sw-12.svg": "./src/Weather_SVGs/sw-12.svg",
+	"./sw-13.svg": "./src/Weather_SVGs/sw-13.svg",
+	"./sw-14.svg": "./src/Weather_SVGs/sw-14.svg",
+	"./sw-15.svg": "./src/Weather_SVGs/sw-15.svg",
+	"./sw-16.svg": "./src/Weather_SVGs/sw-16.svg",
+	"./sw-17.svg": "./src/Weather_SVGs/sw-17.svg",
+	"./sw-18.svg": "./src/Weather_SVGs/sw-18.svg",
+	"./sw-19.svg": "./src/Weather_SVGs/sw-19.svg",
+	"./sw-20.svg": "./src/Weather_SVGs/sw-20.svg",
+	"./sw-21.svg": "./src/Weather_SVGs/sw-21.svg",
+	"./sw-22.svg": "./src/Weather_SVGs/sw-22.svg",
+	"./sw-23.svg": "./src/Weather_SVGs/sw-23.svg",
+	"./sw-24.svg": "./src/Weather_SVGs/sw-24.svg",
+	"./sw-25.svg": "./src/Weather_SVGs/sw-25.svg",
+	"./sw-26.svg": "./src/Weather_SVGs/sw-26.svg",
+	"./sw-27.svg": "./src/Weather_SVGs/sw-27.svg",
+	"./sw-28.svg": "./src/Weather_SVGs/sw-28.svg",
+	"./sw-29.svg": "./src/Weather_SVGs/sw-29.svg",
+	"./sw-30.svg": "./src/Weather_SVGs/sw-30.svg",
+	"./sw-31.svg": "./src/Weather_SVGs/sw-31.svg",
+	"./sw-32.svg": "./src/Weather_SVGs/sw-32.svg",
+	"./sw-33.svg": "./src/Weather_SVGs/sw-33.svg",
+	"./sw-34.svg": "./src/Weather_SVGs/sw-34.svg",
+	"./sw-35.svg": "./src/Weather_SVGs/sw-35.svg",
+	"./sw-36.svg": "./src/Weather_SVGs/sw-36.svg",
+	"./sw-37.svg": "./src/Weather_SVGs/sw-37.svg",
+	"./sw-38.svg": "./src/Weather_SVGs/sw-38.svg",
+	"./sw-39.svg": "./src/Weather_SVGs/sw-39.svg",
+	"./sw-40.svg": "./src/Weather_SVGs/sw-40.svg",
+	"./sw-41.svg": "./src/Weather_SVGs/sw-41.svg",
+	"./sw-42.svg": "./src/Weather_SVGs/sw-42.svg",
+	"./sw-43.svg": "./src/Weather_SVGs/sw-43.svg",
+	"./sw-44.svg": "./src/Weather_SVGs/sw-44.svg",
+	"./sw-45.svg": "./src/Weather_SVGs/sw-45.svg",
+	"./sw-46.svg": "./src/Weather_SVGs/sw-46.svg",
+	"./sw-47.svg": "./src/Weather_SVGs/sw-47.svg",
+	"./sw-48.svg": "./src/Weather_SVGs/sw-48.svg",
+	"./sw-49.svg": "./src/Weather_SVGs/sw-49.svg",
+	"./sw-50.svg": "./src/Weather_SVGs/sw-50.svg",
+	"./sw-51.svg": "./src/Weather_SVGs/sw-51.svg",
+	"./sw-52.svg": "./src/Weather_SVGs/sw-52.svg",
+	"./sw-53.svg": "./src/Weather_SVGs/sw-53.svg",
+	"./sw-54.svg": "./src/Weather_SVGs/sw-54.svg",
+	"./sw-55.svg": "./src/Weather_SVGs/sw-55.svg",
+	"./sw-57.svg": "./src/Weather_SVGs/sw-57.svg",
+	"./sw-58.svg": "./src/Weather_SVGs/sw-58.svg",
+	"./sw-60.svg": "./src/Weather_SVGs/sw-60.svg",
+	"./tempUnit.svg": "./src/Weather_SVGs/tempUnit.svg"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./src/Weather_SVGs sync recursive ^\\.\\/.*\\.svg$";
+
+/***/ }),
+
 /***/ "./src/apikey.js":
 /*!***********************!*\
   !*** ./src/apikey.js ***!
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "API_KEY": () => (/* binding */ API_KEY)
@@ -742,7 +864,646 @@ const API_KEY = '57b9d44519789e4e34d6570a37d7976d'
   \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "23dfe02c0368bc83d2ca.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-02.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-02.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "94cb42fe845186cdefdb.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-03.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-03.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "90558500d57e863174be.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-04.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-04.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "2c05537b47bb7cc4f082.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-05.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-05.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "49fbea206880d414b392.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-06.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-06.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "d9fcbb0aad2acd4dc764.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-07.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-07.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "bbeb150cca40d6c5e328.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-08.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-08.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "f26443da66ec0f5a6465.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-09.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-09.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "944b9ab469ae14df9392.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-10.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-10.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "effca6419a0bceb0c75e.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-11.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-11.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "d6b5582726f61305e539.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-12.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-12.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "6bda6a41888c5f8a4eeb.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-13.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-13.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "42dea0dcbfb245706553.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-14.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-14.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "83c18693ea5e410bbd60.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-15.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-15.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "710d498ae80241fa0cf5.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-16.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-16.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "0979ee55ca5b145ec082.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-17.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-17.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "b76aeecc7fe55ceae1b8.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-18.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-18.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "b7987d6c7775caf4f4a8.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-19.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-19.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "1e20b8536e234ac1d93d.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-20.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-20.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "e9ee5dfd844358661161.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-21.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-21.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "7aaf24943e921aca7a99.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-22.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-22.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "8bfb01bcab8d57939479.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-23.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-23.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "5c03846882c40b6a3832.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-24.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-24.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "797b3353f731dadb9710.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-25.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-25.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "426c3b513485aba6c1aa.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-26.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-26.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "e107524e67f898a3981a.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-27.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-27.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "3c485666784672d96e05.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-28.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-28.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "88cf325b816fae1c9b87.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-29.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-29.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "dd873a4649fb5053e6a4.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-30.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-30.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "6f673c0de0bd02402927.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-31.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-31.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "78496b040aa9466ccc7a.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-32.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-32.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "fe970dec894b63c82488.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-33.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-33.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "21fad83887a65a7a37b8.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-34.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-34.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "1c4cc69fa46d3b4f2613.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-35.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-35.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "953d18a880c60dfd920c.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-36.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-36.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "ea4be6f4ececb87e3330.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-37.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-37.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "1dee51e4559dd20a4cc4.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-38.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-38.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "f63dce8146e70fa72880.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-39.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-39.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "ad8af25ccc0f68cad7ab.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-40.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-40.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "7d21f68a567505b974d7.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-41.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-41.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "6ae7128445649b59bbff.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-42.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-42.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "7b0085b81ab8df63d8e1.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-43.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-43.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "65f15143542fd831aeda.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-44.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-44.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "528b285afdf98b925f46.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-45.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-45.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "d625bc14c997d22ffd5e.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-46.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-46.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "56e672d3de30bdcadabc.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-47.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-47.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "e7897b39a1afa4821a01.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-48.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-48.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "93de42a464e5e77e3f2c.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-49.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-49.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "8b6eedac94776256d315.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-50.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-50.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "5bcc626a39307cec6499.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-51.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-51.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "639720cb7b70cf08c572.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-52.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-52.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "1a4233c0738018e100b7.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-53.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-53.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "4de2ca0b02aa19b902e0.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-54.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-54.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "275809d8f6b0ebe96734.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-55.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-55.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "25575be12392a891cb47.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-57.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-57.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "9f062d1c907c88dabd6d.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-58.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-58.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "f1b11ab45a6b0472fcb1.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/sw-60.svg":
+/*!************************************!*\
+  !*** ./src/Weather_SVGs/sw-60.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "d367b2fb6994825c1c45.svg";
+
+/***/ }),
+
+/***/ "./src/Weather_SVGs/tempUnit.svg":
+/*!***************************************!*\
+  !*** ./src/Weather_SVGs/tempUnit.svg ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "2767b82106e693efedfe.svg";
 
 /***/ }),
 
@@ -752,6 +1513,7 @@ module.exports = __webpack_require__.p + "23dfe02c0368bc83d2ca.svg";
   \****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "6073c873ee1766a0b476.jpg";
 
 /***/ })
@@ -886,8 +1648,9 @@ module.exports = __webpack_require__.p + "6073c873ee1766a0b476.jpg";
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!***************************!*\
   !*** ./src/controller.js ***!
   \***************************/
