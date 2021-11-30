@@ -24,6 +24,13 @@ class Utility{
         const weatherIcon = require(`./Weather_SVGs/${this.icon}`);
         return weatherIcon
     }
-    
+    static getType(userInput){
+        //Testing
+        let input = document.querySelector('input');
+        let type = typeof input.value;
+        console.log(input.value)
+        console.log(type)
+        return type
+    }
 }
 export { Utility }

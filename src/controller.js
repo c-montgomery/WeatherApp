@@ -2,6 +2,7 @@
 import './style.css'
 import pic from './background.jpg'
 import {Weather} from './Weather'
+import {Utility} from "./Icon" 
 
 let background = new Image()
 background.src = pic
@@ -14,7 +15,9 @@ window.addEventListener('keydown',(e)=> {
         Weather.attachWindow(e)
         let info = new Weather()
         let input = document.querySelector('input')
+        Utility.getType(input.value)
         info.retrieve(input.value)
+
     }
     
     

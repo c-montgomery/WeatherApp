@@ -621,7 +621,14 @@ class Utility{
         const weatherIcon = __webpack_require__("./src/Weather_SVGs sync recursive ^\\.\\/.*$")(`./${this.icon}`);
         return weatherIcon
     }
-    
+    static getType(userInput){
+        //Testing
+        let input = document.querySelector('input');
+        let type = typeof input.value;
+        console.log(input.value)
+        console.log(type)
+        return type
+    }
 }
 
 
@@ -1652,10 +1659,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 /* harmony import */ var _background_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./background.jpg */ "./src/background.jpg");
 /* harmony import */ var _Weather__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Weather */ "./src/Weather.js");
+/* harmony import */ var _Icon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Icon */ "./src/Icon.js");
 
 
 
 
+ 
 
 let background = new Image()
 background.src = _background_jpg__WEBPACK_IMPORTED_MODULE_1__
@@ -1668,7 +1677,9 @@ window.addEventListener('keydown',(e)=> {
         _Weather__WEBPACK_IMPORTED_MODULE_2__.Weather.attachWindow(e)
         let info = new _Weather__WEBPACK_IMPORTED_MODULE_2__.Weather()
         let input = document.querySelector('input')
+        _Icon__WEBPACK_IMPORTED_MODULE_3__.Utility.getType(input.value)
         info.retrieve(input.value)
+
     }
     
     
