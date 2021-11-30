@@ -1,5 +1,5 @@
 import {API_KEY} from './apikey'
-import {Icon} from './Icon'
+import {Utility} from './Icon'
 
 
 let input = document.querySelector('input')
@@ -64,7 +64,7 @@ class Weather{
             let headerRight = document.querySelector('.headerRightMiddle')
 
             let weatherSVG = new Image(80,80)
-            let icon = new Icon(response.weather[0].id)
+            let icon = new Utility(response.weather[0].id)
             weatherSVG.src = icon.image
             let headerRightMiddle = document.querySelector('.headerRightMiddle')
             headerRightMiddle.appendChild(weatherSVG)
@@ -82,13 +82,11 @@ class Weather{
     }
 
     convert = (zip)=>{
-        console.log(this.zip)
         fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${this.zip}&appid=${API_KEY}`, {mode: 'cors'})
         .then(function(response){
             return response.json();
         })
         .then(function(response){
-            console.log(response)
             let name = response.name
             let headerLeft = document.querySelector('.headerLeft');
             headerLeft.textContent = name + ", " + response.zip;

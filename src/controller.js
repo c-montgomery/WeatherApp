@@ -15,11 +15,11 @@ window.addEventListener('keydown',(e)=> {
         let info = new Weather()
         let input = document.querySelector('input')
         info.retrieve(input.value)
-        console.log('fart')
     }
     
     
 })
+
 
 
 

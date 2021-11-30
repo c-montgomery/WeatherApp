@@ -1,5 +1,5 @@
 
-class Icon{
+class Utility{
     constructor(weather){
         this.weather = weather
         this.icon = "sw-01"
@@ -26,4 +26,4 @@ class Icon{
     }
     
 }
-export { Icon }
+export { Utility }

@@ -593,10 +593,10 @@ module.exports = styleTagTransform;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Icon": () => (/* binding */ Icon)
+/* harmony export */   "Utility": () => (/* binding */ Utility)
 /* harmony export */ });
 
-class Icon{
+class Utility{
     constructor(weather){
         this.weather = weather
         this.icon = "sw-01"
@@ -706,7 +706,7 @@ class Weather{
             let headerRight = document.querySelector('.headerRightMiddle')
 
             let weatherSVG = new Image(80,80)
-            let icon = new _Icon__WEBPACK_IMPORTED_MODULE_1__.Icon(response.weather[0].id)
+            let icon = new _Icon__WEBPACK_IMPORTED_MODULE_1__.Utility(response.weather[0].id)
             weatherSVG.src = icon.image
             let headerRightMiddle = document.querySelector('.headerRightMiddle')
             headerRightMiddle.appendChild(weatherSVG)
@@ -724,13 +724,11 @@ class Weather{
     }
 
     convert = (zip)=>{
-        console.log(this.zip)
         fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${this.zip}&appid=${_apikey__WEBPACK_IMPORTED_MODULE_0__.API_KEY}`, {mode: 'cors'})
         .then(function(response){
             return response.json();
         })
         .then(function(response){
-            console.log(response)
             let name = response.name
             let headerLeft = document.querySelector('.headerLeft');
             headerLeft.textContent = name + ", " + response.zip;
@@ -1671,11 +1669,11 @@ window.addEventListener('keydown',(e)=> {
         let info = new _Weather__WEBPACK_IMPORTED_MODULE_2__.Weather()
         let input = document.querySelector('input')
         info.retrieve(input.value)
-        console.log('fart')
     }
     
     
 })
+
 
 
 
